@@ -25,8 +25,9 @@ function resetFunction() {
   warning.innerHTML = "Bol Şans!";
   aproveBtn.style.visibility = "hidden";
   denyBtn.style.visibility = "hidden";
+  resetBtn.style.visibility = "hidden";
   start = true;
-  console.log(random);
+  console.log(random, "here you can track the answer:)");
 }
 
 window.addEventListener("load", () => {
@@ -40,21 +41,31 @@ window.addEventListener("load", () => {
   warning.innerHTML = "Bol Şans!";
   warning.style.color = "red";
   start = true;
-  console.log(random);
+  console.log(random, "here you can track the answer:)");
 });
 
 var choice;
+var random1;
 div1.addEventListener("click", () => {
   if (start) {
     div1.style.background = "green";
     warning.innerHTML = "Tercihiniz ile devam etmek istiyor musunuz?";
     choice = 1;
-    if (random == 1 || random == 2) {
+    random1 = Math.ceil(Math.random() * 2);
+    if (random == 2) {
       div3.style.backgroundImage = "url(./false.jpg)";
       div3.style.backgroundSize = "cover";
-    } else if (random == 1 || random == 3) {
+    } else if (random == 3) {
       div2.style.backgroundImage = "url(./false.jpg)";
       div2.style.backgroundSize = "cover";
+    } else if (random == 1) {
+      if (random1 == 1) {
+        div2.style.backgroundImage = "url(./false.jpg)";
+        div2.style.backgroundSize = "cover";
+      } else {
+        div3.style.backgroundImage = "url(./false.jpg)";
+        div3.style.backgroundSize = "cover";
+      }
     }
     start = false;
     aproveBtn.style.visibility = "visible";
@@ -66,12 +77,21 @@ div2.addEventListener("click", () => {
     div2.style.background = "green";
     warning.innerHTML = "Tercihiniz ile devam etmek istiyor musunuz?";
     choice = 2;
-    if (random == 2 || random == 1) {
+    random1 = Math.ceil(Math.random() * 2);
+    if (random == 1) {
       div3.style.backgroundImage = "url(./false.jpg)";
       div3.style.backgroundSize = "cover";
-    } else if (random == 2 || random == 3) {
+    } else if (random == 3) {
       div1.style.backgroundImage = "url(./false.jpg)";
       div1.style.backgroundSize = "cover";
+    } else if (random == 2) {
+      if (random1 == 1) {
+        div1.style.backgroundImage = "url(./false.jpg)";
+        div1.style.backgroundSize = "cover";
+      } else {
+        div3.style.backgroundImage = "url(./false.jpg)";
+        div3.style.backgroundSize = "cover";
+      }
     }
     start = false;
     aproveBtn.style.visibility = "visible";
@@ -83,12 +103,21 @@ div3.addEventListener("click", () => {
     div3.style.background = "green";
     warning.innerHTML = "Tercihiniz ile devam etmek istiyor musunuz?";
     choice = 3;
-    if (random == 3 || random == 2) {
+    random1 = Math.ceil(Math.random() * 2);
+    if (random == 2) {
       div1.style.backgroundImage = "url(./false.jpg)";
       div1.style.backgroundSize = "cover";
-    } else if (random == 3 || random == 1) {
+    } else if (random == 1) {
       div2.style.backgroundImage = "url(./false.jpg)";
       div2.style.backgroundSize = "cover";
+    } else if (random == 3) {
+      if (random1 == 1) {
+        div1.style.backgroundImage = "url(./false.jpg)";
+        div1.style.backgroundSize = "cover";
+      } else {
+        div2.style.backgroundImage = "url(./false.jpg)";
+        div2.style.backgroundSize = "cover";
+      }
     }
     start = false;
     aproveBtn.style.visibility = "visible";
@@ -146,6 +175,7 @@ aproveBtn.addEventListener("click", () => {
   }
   aproveBtn.style.visibility = "hidden";
   denyBtn.style.visibility = "hidden";
+  resetBtn.style.visibility = "visible";
 });
 
 denyBtn.addEventListener("click", () => {
@@ -264,6 +294,7 @@ denyBtn.addEventListener("click", () => {
   }
   aproveBtn.style.visibility = "hidden";
   denyBtn.style.visibility = "hidden";
+  resetBtn.style.visibility = "visible";
 });
 function resetFunction2() {
   prob1 = 0;
