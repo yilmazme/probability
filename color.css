@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #e1f0c4;
+}
+button:hover {
+  opacity: 0.6;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #57c4e5;
+}
+.statistic {
+  display: flex;
+}
+
+#aprove-btn,
+#deny-btn {
+  visibility: hidden;
+}
+
+#div1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #721b65, #d1d646);
+  background-size: cover;
+  cursor: pointer;
+}
+#div2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #721b65, #d1d646);
+  background-size: cover;
+  cursor: pointer;
+}
+#div3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #721b65, #d1d646);
+  background-size: cover;
+  cursor: pointer;
+}
+#statistic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#choice-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#reset-btn {
+  background-color: #55917f;
+  border: black 2px solid;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+#reset-btn-div {
+  text-align: center;
+}
+#reset-stats-btn-div {
+  text-align: center;
+}
+#aprove-btn {
+  background-color: rgb(161, 56, 56);
+  width: 60px;
+  color: white;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#deny-btn {
+  background-color: rgb(161, 56, 56);
+  width: 60px;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  #div1 {
+    width: 27vw;
+    height: 27vw;
+  }
+  #div2 {
+    width: 27vw;
+    height: 27vw;
+  }
+  #div3 {
+    width: 27vw;
+    height: 27vw;
+  }
+  #statistic {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}

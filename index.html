@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="car, game, probability" />
+    <meta name="description" content="probability car game" />
+    <meta name="author" content="Mehmet Yilmaz" />
+    <title>Probability Game</title>
+    <link rel="stylesheet" href="color.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="div1"></div>
+      <div id="div2"></div>
+      <div id="div3"></div>
+    </div>
+
+    <div id="reset-btn-div">
+      <button id="reset-btn" onclick="resetFunction()">Arabayı Sakla</button>
+    </div>
+    <div id="choice-btn">
+      <h3 id="warning">Bol Şanslar!</h3>
+      <div>
+        <button id="aprove-btn">Evet</button>
+        <button id="deny-btn">Hayır</button>
+      </div>
+    </div>
+    <div id="statistic">
+      <div>
+        <h2>Değiştirmediğinizde:</h2>
+        <div class="statistic">
+          <p>Kazanma Sayınız:&nbsp</p>
+          <b><p id="statistic1">0</p></b>
+        </div>
+
+        <div class="statistic">
+          <p>Kazanma Yüzdeniz:&nbsp</p>
+          <b><p id="probability1">0</p></b>
+        </div>
+      </div>
+      <div>
+        <h2>Değiştirdiğinizde:</h2>
+        <div class="statistic">
+          <p>Kazanma Sayınız:&nbsp</p>
+          <b><p id="statistic2">0</p></b>
+        </div>
+        <div class="statistic">
+          <p>Kazanma Yüzdeniz:&nbsp</p>
+          <b><p id="probability2">0</p></b>
+        </div>
+      </div>
+    </div>
+    <div id="reset-stats-btn-div">
+      <button id="reset-btn" onclick="resetFunction2()">
+        İstatistikleri Sıfırla
+      </button>
+    </div>
+    <script src="color.js"></script>
+  </body>
+</html>
