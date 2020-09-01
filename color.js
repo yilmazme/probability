@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
   warning.innerHTML = "Bol Şans!";
   warning.style.color = "red";
   start = true;
-  console.log(random, "here you can track the answer:)");
+  console.log(random);
 });
 
 var choice;
